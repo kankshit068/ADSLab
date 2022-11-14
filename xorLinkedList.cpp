@@ -57,16 +57,35 @@ void push(Node* &headRef, int data)
 }
  
 int main()
-{
-    
-    vector<int> keys = { 1, 2, 3, 4, 5 };
- 
-    Node* head = nullptr;
-    for (int i = keys.size() - 1; i >=0; i--) {
-        push(head, keys[i]);
-    }
- 
-    traverse(head);
+{   Node* head = nullptr;
+    int p;
+    do{
+      cout<<"1.insert\n"<<"2.dispay"<<endl;
+      cout<<"Enter the number\n";
+      int k;
+      cin>>k;
+      switch(k){
+          
+          case 1: cout<<"enter the data\n";
+          int data;
+          cin>>data;
+          
+          push(head,data);
+          break;
+          
+          case 2: traverse(head);
+               break;
+               
+               
+          
+          
+      }
+      
+      cout<<"Press 1 to continue and 2 for exit\n";
+        cin>>p;
+        
+    }while(p!=2);
+
  
  
    return 0;
